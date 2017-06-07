@@ -1,0 +1,27 @@
+{
+  "name": "send-mail-ses",
+  "version": "1.0.0",
+  "description": "This project sends email using aws lambda and ses",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/subratamazumder/aws-lambda-function.git"
+  },
+  "keywords": [
+    "lambda",
+    "ses",
+    "mail"
+  ],
+  "author": "Subrata Mazumder",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/subratamazumder/aws-lambda-function/issues"
+  },
+  "homepage": "https://github.com/subratamazumder/aws-lambda-function#readme",
+  "dependencies": {
+    "aws-sdk": "^2.64.0"
+  }
+}
