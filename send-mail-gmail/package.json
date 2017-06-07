@@ -1,0 +1,24 @@
+{
+  "name": "send-mail-gmail",
+  "version": "1.0.0",
+  "description": "This project creates a aws lambda function which uses gmail to send mail",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/subratamazumder/aws-lambda-function.git"
+  },
+  "keywords": [
+    "aws",
+    "lambda",
+    "gmail"
+  ],
+  "author": "Subrata Mazumder",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/subratamazumder/aws-lambda-function/issues"
+  },
+  "homepage": "https://github.com/subratamazumder/aws-lambda-function#readme"
+}
