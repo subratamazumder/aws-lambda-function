@@ -5,7 +5,7 @@
 //     "message": "Welcome to API Gateway, Lambda & SES",
 // 	   "subject" : "Hello from AWS"
 // }
-//LambdaMicroserviceSendMailSES
+//Exposed via API Gateway Name : LambdaMicroserviceSendMailSES POST
 var aws = require('aws-sdk');
 var ses = new aws.SES();
 exports.handler = function (event, context, callback) {
