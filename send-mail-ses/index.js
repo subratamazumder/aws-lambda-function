@@ -1,10 +1,10 @@
 //Sample Event looks like below
-{
-    "email": "subrata.besu@gmail.com",
-    "name": "Subrata",
-    "message": "Welcome to API Gateway, Lambda & SES",
-	   "subject" : "Hello from AWS"
-}
+// {
+//     "email": "subrata.besu@gmail.com",
+//     "name": "Subrata",
+//     "message": "Welcome to API Gateway, Lambda & SES",
+// 	   "subject" : "Hello from AWS"
+// }
 //LambdaMicroserviceSendMailSES
 var aws = require('aws-sdk');
 var ses = new aws.SES();
