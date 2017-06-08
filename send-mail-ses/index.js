@@ -1,28 +1,29 @@
 //Sample Event looks like below
-// {
-//     "email": "customer@customer-domain.com",
-//     "name": "Customer Name",
-//     "message": "Hello World!\nGoing to the moon!",
-// 	   "subject" : "Test Mail Subject"
-// }
-console.log('hello');
+{
+    "email": "subrata.besu@gmail.com",
+    "name": "Subrata",
+    "message": "Welcome to API Gateway, Lambda & SES",
+	   "subject" : "Hello from AWS"
+}
+//LambdaMicroserviceSendMailSES
 var aws = require('aws-sdk');
-exports.handler = function (event, context) {
+var ses = new aws.SES();
+exports.handler = function (event, context, callback) {
 
     console.log("Event: " + JSON.stringify(event));
 
     // Check required parameters
-    if (event.email == null) {
+    if (event.email === null) {
         context.fail('Bad Request: Missing required attribute: email');
         return;
     }
 
     // Make sure to add a default name
-    if (event.name == null) {
+    if (event.name === null) {
         event.name = 'User';
     }
     // Make sure to add a default subject
-    if (event.subject == null) {
+    if (event.subject === null) {
             event.subject = "Mail from AWS Lambda SES";
     }
     var from = 'support@subrata.tech'
@@ -39,6 +40,11 @@ exports.handler = function (event, context) {
                     Subject: {
                         Data: event.subject,
                         Charset: 'UTF-8'
+                    },
+                    Body : {
+                      Text : {
+                        Data : event.message
+                      }
                     }
                 },
                 Source: from,
@@ -57,4 +63,5 @@ exports.handler = function (event, context) {
             context.succeed('The email was successfully sent to ' + event.email);
         }
     });
+    callback(null, 'The email was successfully sent to ' + event.email);
 }
